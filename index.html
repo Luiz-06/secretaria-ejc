@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b3b68">
+  <meta name="description" content="Uma homenagem da Equipe Secretaria aos jovens do EJC 16ª Edição.">
+  <title>Equipe Secretaria | EJC 16ª Edição</title>
+
+  <!-- O visual do site fica no arquivo style.css. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    TELA DE SENHA
+    A senha NÃO é alterada aqui. Para trocá-la, abra o arquivo script.js e
+    procure pelo comentário "ONDE ALTERAR A SENHA".
+  -->
+  <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
+    <div class="login-card">
+      <div class="login-symbol" aria-hidden="true">✦</div>
+      <p class="eyebrow">EJC 16ª Edição</p>
+      <h1 id="loginTitle">Uma lembrança especial espera por você</h1>
+      <p>Digite a senha compartilhada pela Equipe Secretaria.</p>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <label for="passwordInput">Senha de acesso</label>
+        <div class="password-field">
+          <input
+            id="passwordInput"
+            name="password"
+            type="password"
+            placeholder="Digite a senha"
+            autocomplete="current-password"
+            required
+          >
+          <button id="togglePassword" class="password-toggle" type="button" aria-label="Mostrar senha">
+            <span aria-hidden="true">👁</span>
+          </button>
+        </div>
+        <p class="login-error" id="loginError" role="alert" aria-live="polite"></p>
+        <button class="primary-button" type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Todo o conteúdo principal começa escondido e só aparece após a senha correta. -->
+  <div class="site-content" id="siteContent" hidden>
+    <header class="hero">
+      <nav class="topbar" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="Voltar ao início">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Secretaria EJC</span>
+        </a>
+        <a class="nav-link" href="#galeria">Galeria</a>
+      </nav>
+
+      <!-- ONDE ALTERAR A MENSAGEM PRINCIPAL: edite os textos abaixo. -->
+      <div class="hero-content reveal" id="inicio">
+        <p class="eyebrow">Uma história para guardar no coração</p>
+        <h1>Bem-vindo à<br><span>Equipe Secretaria</span> <span class="heart">♥</span></h1>
+        <p class="hero-subtitle">Foi uma alegria viver este encontro com vocês.</p>
+        <a class="scroll-button" href="#integrantes">
+          Conheça nossa equipe
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="hero-decoration hero-decoration-one" aria-hidden="true"></div>
+      <div class="hero-decoration hero-decoration-two" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="section team-section" id="integrantes" aria-labelledby="teamTitle">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Quem fez acontecer</p>
+          <h2 id="teamTitle">Nossa equipe</h2>
+          <p>Cada sorriso, cada detalhe e cada momento foram preparados com muito carinho.</p>
+        </div>
+
+        <!-- Os cards são colocados aqui automaticamente pelo JavaScript. -->
+        <div class="team-grid" id="teamGrid"></div>
+      </section>
+
+      <section class="section gallery-section" id="galeria" aria-labelledby="galleryTitle">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Momentos inesquecíveis</p>
+          <h2 id="galleryTitle">Nossa galeria</h2>
+          <p>Deslize para reviver um pouquinho de tudo o que compartilhamos.</p>
+        </div>
+
+        <div class="carousel reveal" aria-roledescription="carrossel" aria-label="Fotos e vídeos do encontro">
+          <div class="carousel-viewport" id="carouselViewport">
+            <div class="carousel-track" id="carouselTrack"></div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-button" id="previousButton" type="button" aria-label="Item anterior">←</button>
+            <div class="carousel-status">
+              <span id="currentSlide">01</span>
+              <div class="carousel-progress" aria-hidden="true">
+                <span id="carouselProgressBar"></span>
+              </div>
+              <span id="totalSlides">01</span>
+            </div>
+            <button class="carousel-button" id="nextButton" type="button" aria-label="Próximo item">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ONDE ALTERAR A MENSAGEM FINAL: edite os textos desta seção. -->
+      <section class="farewell-section">
+        <div class="farewell-card reveal">
+          <span class="farewell-symbol" aria-hidden="true">✦</span>
+          <p class="eyebrow">De coração para coração</p>
+          <h2>Sejam muito bem-vindos,<br><span>novos primos!</span></h2>
+          <p>Obrigado por viverem este encontro conosco.</p>
+          <p>Que Deus continue conduzindo cada passo da caminhada de vocês.</p>
+          <div class="signature">Equipe Secretaria <span aria-label="coração">♥</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>EJC 16ª Edição</p>
+      <p>Desenvolvido por: Filho de Maria</p>
+    </footer>
+  </div>
+
+  <!-- Toda a parte interativa do site fica no arquivo script.js. -->
+  <script src="script.js"></script>
+</body>
+</html>
