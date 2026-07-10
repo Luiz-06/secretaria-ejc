@@ -69,8 +69,7 @@ const gruposIntegrantes = [
 */
 const galeria = [
   { tipo: "foto", arquivo: "assets/galeria/teste1.jpg" },
-  { tipo: "foto", arquivo: "assets/galeria/teste2.jpg" },
-  { tipo: "video", arquivo: "assets/videos/teste3.mp4" }
+  { tipo: "foto", arquivo: "assets/galeria/teste2.jpg" }
 ];
 
 /* ==================================================================
