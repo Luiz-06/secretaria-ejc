@@ -68,8 +68,7 @@ const gruposIntegrantes = [
   O site também confere a extensão do arquivo para identificar foto ou vídeo.
 */
 const galeria = [
-  { tipo: "foto", arquivo: "assets/galeria/teste1.jpg" },
-  { tipo: "foto", arquivo: "assets/galeria/teste2.jpg" }
+  { tipo: "foto", arquivo: "assets/galeria/foto1.jpg" }
 ];
 
 /* ==================================================================
