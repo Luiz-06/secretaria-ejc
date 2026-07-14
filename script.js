@@ -11,7 +11,7 @@ const integrantes = [
   { nome: "Maria Vitória", foto: "assets/integrantes/mariavitoria.jpeg" },
   { nome: "Luiz Felipe", foto: "assets/integrantes/luizfelipe.jpg" },
   { nome: "Camila", foto: "assets/integrantes/camila.jpeg" },
-  { nome: "Gabriel", foto: "assets/integrantes/gabriel.jpeg" },
+  { nome: "Gabriel Miranda", foto: "assets/integrantes/gabriel.jpeg" },
   { nome: "Gizelle Rocha", foto: "assets/integrantes/gizellerocha.jpeg" },
   { nome: "Ana Júlia", foto: "assets/integrantes/anajulia.jpeg" },  
   { nome: "Layna Miriely", foto: "assets/integrantes/laynasaraiva.jpeg" },
