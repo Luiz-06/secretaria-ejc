@@ -1,56 +1,27 @@
-/* ==================================================================
-   CONFIGURAÇÕES FÁCEIS DO SITE
-   Esta é a parte que você provavelmente mais vai editar.
-   ================================================================== */
-
-/*
-  ONDE ALTERAR A SENHA
-  Troque apenas o texto entre aspas. Exemplo: const SENHA_CORRETA = "novaSenha";
-
-  IMPORTANTE: como este site é totalmente estático, a senha serve como uma
-  barreira simples e não como proteção de segurança real. Uma pessoa com
-  conhecimento técnico pode encontrar a senha no código-fonte.
-*/
 const SENHA_CORRETA = "ejc16";
 
-/*
-  ONDE ALTERAR NOMES, TROCAR FOTOS E ADICIONAR NOVOS MEMBROS
-
-  1. Coloque a foto dentro da pasta assets/integrantes.
-  2. Copie um bloco completo { nome: ..., foto: ... }.
-  3. Separe cada bloco com uma vírgula.
-  4. O nome do arquivo precisa ser exatamente igual ao que está na pasta.
-
-  Os itens abaixo são exemplos. Você pode trocar todos eles.
-*/
 const integrantes = [
-  { nome: "Ana Clara", foto: "assets/integrantes/anaclra.jpg", categoria: "coordenacao" },
-  { nome: "Cicero Luan", foto: "assets/integrantes/ciceroluan.jpg", categoria: "coordenacao" },
-  { nome: "Tio Galdino e Jordania", foto: "assets/integrantes/gaudinoejordania.jpeg", categoria: "apoio" },
-  { nome: "Tio William e Vanessa", foto: "assets/integrantes/williamevanessa.jpeg", categoria: "tios-apoio" },
-  { nome: "Tio Ribamar e Lourdinha", foto: "assets/integrantes/ribamarelourdinha.jpeg", categoria: "tios-apoio" },
-  { nome: "Danilo Freitas", foto: "assets/integrantes/danilo.jpg" },
-  { nome: "João Pedro", foto: "assets/integrantes/joaopedro.jpg" },
-  { nome: "Maria Vitória", foto: "assets/integrantes/mariavitoria.jpg" },
+  { nome: "Ana Clara", foto: "assets/integrantes/anaclra.jpeg", categoria: "coordenacao" },
+  { nome: "Cicero Luan", foto: "assets/integrantes/ciceroluan.jpeg", categoria: "coordenacao" },
+  { nome: "Tios Galdino e Jordania", foto: "assets/integrantes/gaudinoejordania.jpeg", categoria: "apoio" },
+  { nome: "Tios William e Vanessa", foto: "assets/integrantes/williamevanessa.jpeg", categoria: "tios-apoio" },
+  { nome: "Tios Ribamar e Lourdinha", foto: "assets/integrantes/ribamarelourdinha.jpeg", categoria: "tios-apoio" },
+  { nome: "Danilo Freitas", foto: "assets/integrantes/danilo.jpeg" },
+  { nome: "João Pedro", foto: "assets/integrantes/joaopedro.jpeg" },
+  { nome: "Maria Vitória", foto: "assets/integrantes/mariavitoria.jpeg" },
   { nome: "Luiz Felipe", foto: "assets/integrantes/luizfelipe.jpg" },
-  { nome: "Camila", foto: "assets/integrantes/camila.jpg" },
-  { nome: "Gabriel", foto: "assets/integrantes/gabriel.jpg" },
-  { nome: "Gizelle Rocha", foto: "assets/integrantes/gizellerocha.jpg" },
-  { nome: "Ana Júlia", foto: "assets/integrantes/anajulia.jpg" },
-  { nome: "Layna Saraiva", foto: "assets/integrantes/laynasaraiva.jpg" },
-  { nome: "Maria Eduarda", foto: "assets/integrantes/mariaeduarda.jpg" },
-  { nome: "Luiza Veloso", foto: "assets/integrantes/luizaveloso.jpg" },
-  { nome: "Maria Eduarda", foto: "assets/integrantes/mariaeduarda.jpg" },
-  { nome: "Mirella", foto: "assets/integrantes/mirella.jpg" },
-  { nome: "Suzane", foto: "assets/integrantes/suzane.jpg" },
-  { nome: "Wimbledon Lino", foto: "assets/integrantes/wimbledon.jpg" }
+  { nome: "Camila", foto: "assets/integrantes/camila.jpeg" },
+  { nome: "Gabriel", foto: "assets/integrantes/gabriel.jpeg" },
+  { nome: "Gizelle Rocha", foto: "assets/integrantes/gizellerocha.jpeg" },
+  { nome: "Ana Júlia", foto: "assets/integrantes/anajulia.jpeg" },  
+  { nome: "Layna Miriely", foto: "assets/integrantes/laynasaraiva.jpeg" },
+  { nome: "Maria Eduarda", foto: "assets/integrantes/mariaeduarda.jpeg" },
+  { nome: "Luiza Veloso", foto: "assets/integrantes/luizaveloso.jpeg" },
+  { nome: "Mirella Ferraz", foto: "assets/integrantes/mirella.jpeg" },
+  { nome: "Suzane", foto: "assets/integrantes/suzane.jpeg" },
+  { nome: "Wimbledon Lino", foto: "assets/integrantes/wimbledon.jpeg" }
 ];
 
-/*
-  GRUPOS EXIBIDOS NA SEÇÃO DA EQUIPE
-  Quem não tiver uma "categoria" informada será colocado automaticamente
-  no grupo "Membros". Assim, os demais integrantes não precisam ser alterados.
-*/
 const gruposIntegrantes = [
   { categoria: "coordenacao", titulo: "Jovens Coordenadores" },
   { categoria: "apoio", titulo: "Tios Apoio da Coordenação" },
@@ -58,15 +29,6 @@ const gruposIntegrantes = [
   { categoria: "membros", titulo: "Membros" }
 ];
 
-/*
-  ONDE ADICIONAR NOVAS FOTOS E NOVOS VÍDEOS
-
-  FOTO: coloque em assets/galeria e use tipo: "foto".
-  VÍDEO: coloque em assets/videos e use tipo: "video".
-
-  Para adicionar um item, copie uma linha, cole antes do ]; e ajuste o caminho.
-  O site também confere a extensão do arquivo para identificar foto ou vídeo.
-*/
 const galeria = [
   { tipo: "foto", arquivo: "assets/galeria/foto1.jpeg" },
   { tipo: "foto", arquivo: "assets/galeria/foto2.jpeg" },
@@ -80,10 +42,6 @@ const galeria = [
   { tipo: "foto", arquivo: "assets/galeria/foto8.jpeg" },
 ];
 
-/* ==================================================================
-   ELEMENTOS DA PÁGINA
-   Daqui para baixo não é preciso alterar para trocar o conteúdo do site.
-   ================================================================== */
 const loginScreen = document.querySelector("#loginScreen");
 const siteContent = document.querySelector("#siteContent");
 const loginForm = document.querySelector("#loginForm");
@@ -103,7 +61,6 @@ let currentSlideIndex = 0;
 let touchStartX = 0;
 let touchEndX = 0;
 
-/* Mostra uma inicial bonita quando uma foto ainda não foi adicionada à pasta. */
 function createMemberFallback(name) {
   const fallback = document.createElement("div");
   fallback.className = "media-placeholder";
@@ -117,7 +74,6 @@ function createMemberFallback(name) {
   return fallback;
 }
 
-/* Cria um card individual. Esta função é reutilizada em todos os grupos. */
 function createMemberCard(member) {
   const card = document.createElement("article");
   card.className = "member-card reveal";
@@ -132,7 +88,6 @@ function createMemberCard(member) {
   photo.loading = "lazy";
   photo.draggable = false;
 
-  /* Se o arquivo não existir, substitui a imagem quebrada por uma inicial. */
   photo.addEventListener("error", () => {
     photoWrap.replaceChildren(createMemberFallback(member.nome));
   }, { once: true });
@@ -145,7 +100,6 @@ function createMemberCard(member) {
   return card;
 }
 
-/* Cria os grupos e distribui os integrantes automaticamente. */
 function renderMembers() {
   teamGrid.textContent = "";
 
@@ -155,7 +109,6 @@ function renderMembers() {
       return memberCategory === group.categoria;
     });
 
-    /* Não mostra um grupo vazio. */
     if (groupMembers.length === 0) return;
 
     const section = document.createElement("section");
@@ -177,14 +130,12 @@ function renderMembers() {
   });
 }
 
-/* Descobre o tipo também pela extensão, mesmo se "tipo" tiver sido esquecido. */
 function detectMediaType(item) {
   const extension = item.arquivo.split(".").pop().toLowerCase();
   const videoExtensions = ["mp4", "webm", "ogg", "mov"];
   return item.tipo === "video" || videoExtensions.includes(extension) ? "video" : "foto";
 }
 
-/* Cria um aviso agradável caso um arquivo da galeria ainda não exista. */
 function showMediaFallback(slide, item, index) {
   const fallback = document.createElement("div");
   fallback.className = "media-placeholder";
@@ -200,7 +151,6 @@ function showMediaFallback(slide, item, index) {
   slide.replaceChildren(fallback);
 }
 
-/* Cria as fotos e os vídeos do carrossel usando a lista "galeria". */
 function renderGallery() {
   carouselTrack.textContent = "";
 
@@ -244,12 +194,10 @@ function renderGallery() {
   });
 }
 
-/* Formata 1 como 01 para deixar o indicador visualmente mais elegante. */
 function formatSlideNumber(number) {
   return String(number).padStart(2, "0");
 }
 
-/* Move o carrossel e atualiza os números e a barra de progresso. */
 function updateCarousel() {
   const slideCount = Math.max(galeria.length, 1);
   carouselTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
@@ -257,7 +205,6 @@ function updateCarousel() {
   totalSlidesLabel.textContent = formatSlideNumber(slideCount);
   progressBar.style.width = `${((currentSlideIndex + 1) / slideCount) * 100}%`;
 
-  /* Pausa vídeos que ficaram fora da tela ao trocar de item. */
   carouselTrack.querySelectorAll("video").forEach((video) => {
     const videoSlide = video.closest(".carousel-slide");
     const activeSlide = carouselTrack.children[currentSlideIndex];
@@ -277,7 +224,6 @@ function goToPreviousSlide() {
   updateCarousel();
 }
 
-/* Observa a rolagem e ativa o efeito de aparecer suavemente. */
 function startRevealAnimations() {
   const elements = document.querySelectorAll(".reveal");
 
@@ -298,7 +244,6 @@ function startRevealAnimations() {
   elements.forEach((element) => observer.observe(element));
 }
 
-/* Libera o site somente quando a senha digitada estiver correta. */
 function handleLogin(event) {
   event.preventDefault();
 
@@ -316,13 +261,11 @@ function handleLogin(event) {
   loginError.textContent = "Senha incorreta";
   passwordInput.classList.add("has-error");
   loginError.classList.remove("shake");
-  /* Força o navegador a reiniciar a pequena animação de erro. */
   void loginError.offsetWidth;
   loginError.classList.add("shake");
   passwordInput.select();
 }
 
-/* Eventos da tela de senha. */
 loginForm.addEventListener("submit", handleLogin);
 
 passwordInput.addEventListener("input", () => {
@@ -337,14 +280,10 @@ togglePassword.addEventListener("click", () => {
   passwordInput.focus();
 });
 
-/* Eventos dos botões do carrossel. */
 previousButton.addEventListener("click", goToPreviousSlide);
+
 nextButton.addEventListener("click", goToNextSlide);
 
-/*
-  Movimento de deslizar no celular (swipe).
-  Um movimento mínimo de 50 pixels evita trocas acidentais.
-*/
 carouselViewport.addEventListener("touchstart", (event) => {
   touchStartX = event.changedTouches[0].clientX;
 }, { passive: true });
@@ -358,24 +297,18 @@ carouselViewport.addEventListener("touchend", (event) => {
   if (distance > 0) goToPreviousSlide();
 }, { passive: true });
 
-/* Permite usar as setas do teclado em computadores. */
 document.addEventListener("keydown", (event) => {
   if (siteContent.hidden) return;
   if (event.key === "ArrowLeft") goToPreviousSlide();
   if (event.key === "ArrowRight") goToNextSlide();
 });
 
-/*
-  MEDIDAS PARA DIFICULTAR CÓPIAS
-  Sites não conseguem impedir capturas de tela. Estas medidas apenas bloqueiam
-  ações comuns do navegador, conforme solicitado no briefing.
-*/
 document.addEventListener("contextmenu", (event) => event.preventDefault());
+
 document.addEventListener("dragstart", (event) => {
   if (event.target instanceof HTMLImageElement) event.preventDefault();
 });
 
-/* Monta o conteúdo assim que o arquivo é carregado. */
 renderMembers();
 renderGallery();
 updateCarousel();
