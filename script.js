@@ -98,9 +98,6 @@ const nextButton = document.querySelector("#nextButton");
 const currentSlideLabel = document.querySelector("#currentSlide");
 const totalSlidesLabel = document.querySelector("#totalSlides");
 const progressBar = document.querySelector("#carouselProgressBar");
-const photoLightbox = document.querySelector("#photoLightbox");
-const lightboxImage = document.querySelector("#lightboxImage");
-const lightboxClose = document.querySelector("#lightboxClose");
 
 let currentSlideIndex = 0;
 let touchStartX = 0;
@@ -203,46 +200,6 @@ function showMediaFallback(slide, item, index) {
   slide.replaceChildren(fallback);
 }
 
-/* Abre a foto sem recortes em uma camada que ocupa toda a tela. */
-function openPhotoLightbox(photo) {
-  lightboxImage.src = photo.currentSrc || photo.src;
-  lightboxImage.alt = photo.alt;
-  document.body.classList.add("lightbox-open");
-
-  if (typeof photoLightbox.showModal === "function") {
-    photoLightbox.showModal();
-  } else {
-    photoLightbox.setAttribute("open", "");
-  }
-
-  lightboxClose.focus();
-}
-
-function closePhotoLightbox() {
-  if (typeof photoLightbox.close === "function" && photoLightbox.open) {
-    photoLightbox.close();
-  } else {
-    photoLightbox.removeAttribute("open");
-    document.body.classList.remove("lightbox-open");
-  }
-}
-
-/* Cria o icone simples exibido no canto superior direito de cada foto. */
-function createFullscreenButton(photo) {
-  const button = document.createElement("button");
-  button.className = "fullscreen-button";
-  button.type = "button";
-  button.setAttribute("aria-label", "Abrir foto em tela cheia");
-  button.title = "Ver foto inteira";
-  button.innerHTML = `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path>
-    </svg>
-  `;
-  button.addEventListener("click", () => openPhotoLightbox(photo));
-  return button;
-}
-
 /* Cria as fotos e os vídeos do carrossel usando a lista "galeria". */
 function renderGallery() {
   carouselTrack.textContent = "";
@@ -283,11 +240,6 @@ function renderGallery() {
     media.src = item.arquivo;
     media.addEventListener("error", () => showMediaFallback(slide, item, index), { once: true });
     slide.appendChild(media);
-
-    if (mediaType === "foto") {
-      slide.appendChild(createFullscreenButton(media));
-    }
-
     carouselTrack.appendChild(slide);
   });
 }
@@ -388,17 +340,6 @@ togglePassword.addEventListener("click", () => {
 /* Eventos dos botões do carrossel. */
 previousButton.addEventListener("click", goToPreviousSlide);
 nextButton.addEventListener("click", goToNextSlide);
-lightboxClose.addEventListener("click", closePhotoLightbox);
-
-photoLightbox.addEventListener("click", (event) => {
-  if (event.target === photoLightbox) closePhotoLightbox();
-});
-
-photoLightbox.addEventListener("close", () => {
-  document.body.classList.remove("lightbox-open");
-  lightboxImage.removeAttribute("src");
-  lightboxImage.alt = "";
-});
 
 /*
   Movimento de deslizar no celular (swipe).
@@ -420,7 +361,6 @@ carouselViewport.addEventListener("touchend", (event) => {
 /* Permite usar as setas do teclado em computadores. */
 document.addEventListener("keydown", (event) => {
   if (siteContent.hidden) return;
-  if (photoLightbox.open) return;
   if (event.key === "ArrowLeft") goToPreviousSlide();
   if (event.key === "ArrowRight") goToNextSlide();
 });
