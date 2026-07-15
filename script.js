@@ -1,7 +1,7 @@
 const SENHA_CORRETA = "ejc16";
 
 const integrantes = [
-  { nome: "Ana Clara", foto: "assets/integrantes/anaclra.jpeg", categoria: "coordenacao" },
+  { nome: "Ana Clara", foto: "assets/integrantes/anaclara.jpeg", categoria: "coordenacao" },
   { nome: "Cicero Luan", foto: "assets/integrantes/ciceroluan.jpeg", categoria: "coordenacao" },
   { nome: "Tios Galdino e Jordania", foto: "assets/integrantes/gaudinoejordania.jpeg", categoria: "apoio" },
   { nome: "Tios William e Vanessa", foto: "assets/integrantes/williamevanessa.jpeg", categoria: "tios-apoio" },
@@ -40,6 +40,7 @@ const galeria = [
   { tipo: "foto", arquivo: "assets/galeria/foto6.jpeg" },
   { tipo: "foto", arquivo: "assets/galeria/foto7.jpeg" },
   { tipo: "foto", arquivo: "assets/galeria/foto8.jpeg" },
+  { tipo: "foto", arquivo: "assets/galeria/foto9.jpeg" }
 ];
 
 const loginScreen = document.querySelector("#loginScreen");
