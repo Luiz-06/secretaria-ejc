@@ -2,11 +2,11 @@ const SENHA_CORRETA = "ejc16";
 
 const integrantes = [
   { nome: "Ana Clara", foto: "assets/integrantes/anaclara.jpeg", categoria: "coordenacao" },
-  { nome: "Cicero Luan", foto: "assets/integrantes/ciceroluan.jpeg", categoria: "coordenacao" },
+  { nome: "Cicero Luan", foto: "assets/integrantes/ciceroluan.png", categoria: "coordenacao" },
   { nome: "Tios Galdino e Jordania", foto: "assets/integrantes/gaudinoejordania.jpeg", categoria: "apoio" },
   { nome: "Tios William e Vanessa", foto: "assets/integrantes/williamevanessa.jpeg", categoria: "tios-apoio" },
   { nome: "Tios Ribamar e Lourdinha", foto: "assets/integrantes/ribamarelourdinha.jpeg", categoria: "tios-apoio" },
-  { nome: "Danilo Freitas", foto: "assets/integrantes/danilo.jpeg" },
+  { nome: "Danilo Freitas", foto: "assets/integrantes/danilo.png" },
   { nome: "João Pedro", foto: "assets/integrantes/joaopedro.jpeg" },
   { nome: "Maria Vitória", foto: "assets/integrantes/mariavitoria.jpeg" },
   { nome: "Luiz Felipe", foto: "assets/integrantes/luizfelipe.jpg" },
