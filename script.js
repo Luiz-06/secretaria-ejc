@@ -19,7 +19,8 @@ const integrantes = [
   { nome: "Luiza Veloso", foto: "assets/integrantes/luizaveloso.jpeg" },
   { nome: "Mirella Ferraz", foto: "assets/integrantes/mirella.jpeg" },
   { nome: "Suzane", foto: "assets/integrantes/suzane.jpeg" },
-  { nome: "Wimbledon Lino", foto: "assets/integrantes/wimbledon.jpeg" }
+  { nome: "Wimbledon Lino", foto: "assets/integrantes/wimbledon.jpeg" },
+  { nome: "Foguete", foto: "assets/integrantes/foguete.jpeg" }
 ];
 
 const gruposIntegrantes = [
