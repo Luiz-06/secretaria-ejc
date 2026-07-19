@@ -41,7 +41,8 @@ const galeria = [
   { tipo: "foto", arquivo: "assets/galeria/foto6.jpeg" },
   { tipo: "foto", arquivo: "assets/galeria/foto7.jpeg" },
   { tipo: "foto", arquivo: "assets/galeria/foto8.jpeg" },
-  { tipo: "foto", arquivo: "assets/galeria/foto9.jpeg" }
+  { tipo: "foto", arquivo: "assets/galeria/foto9.jpeg" },
+  { tipo: "foto", arquivo: "assets/galeria/foto10.jpeg" }
 ];
 
 const loginScreen = document.querySelector("#loginScreen");
